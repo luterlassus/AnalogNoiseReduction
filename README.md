@@ -1,4 +1,4 @@
-# ANR
+# Analog noise reduction
 
 ### Analog noise reduction for DVR
 FPV goggles can record DVR, but the drone's transmitted video often contains too much analog noise to be enjoyable. ANR is a project aimed at removing analog noise from digital video recordings. The project uses an autoencoder powered by TensorFlow to remove analog noise. 
