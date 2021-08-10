@@ -1,7 +1,7 @@
 # Analog noise reduction
 
 ### Analog noise reduction for DVR
-FPV goggles can record DVR, but the drone's transmitted video often contains too much analog noise to be enjoyable. ANR is a project aimed at removing analog noise from digital video recordings. The project uses an autoencoder powered by TensorFlow to remove analog noise. 
+FPV goggles can record DVR, but the drone's transmitted video often contains too much analog noise to be enjoyable. AnalogNoiseReduction is a project aimed at removing analog noise from digital video recordings. The project uses an autoencoder powered by TensorFlow to remove analog noise. 
 Example frames processed by the newest model: <br />
 <p align="center">
 Original -- Processed <br />
@@ -19,8 +19,10 @@ The input video should be an AVI file and be 640 by 480 pixels, the standard out
 #
 Due to the specific package version requirements, I recommend using Docker. Set up the environment by cloning the repository and building the Dockerfile after installing Docker with GPU support.
 ```sh
-git clone https://github.com/luterlassus/ANR.git
-cd ANR/Docker/buildImage
+git clone https://github.com/luterlassus/AnalogNoiseReduction.git
+git lfs install
+git lfs pull
+cd AnalogNoiseReduction/Docker/buildImage
 docker build -t ll/anr .
 ```
 Place the video you want the program to process in the /input folder and run the use script provided in the Docker folder. The script assumes that you cloned the repository into a folder called Github in your home directory. Edit the script if this is not the case.  
@@ -33,6 +35,6 @@ I have done most of the development using Jupyter notebooks. They make experimen
 ```sh
 ./startANR.sh
 ```
-
+Enjoy!
 
 <img src = "img/118.gif">
